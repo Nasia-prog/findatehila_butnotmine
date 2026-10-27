@@ -1,42 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#faf8f6">
-<meta name="description" content="Find your Tehila: meet kind people, have a chat, and brighten somebody's day.">
-<title>Findatehilabutnotmine — find your Tehila ♡</title>
-<style>
-:root{--bg:#faf8f6;--paper:#fff;--ink:#242321;--muted:#77736f;--line:#eae5e0;--pink:#f4dce4;--rose:#9f536d;--green:#e2eee5;--shadow:0 12px 34px #30231a0a}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}.wrap{width:min(1080px,calc(100% - 32px));margin:auto}header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:850;letter-spacing:-.055em;text-decoration:none;font-size:1.08rem}.brand span{color:var(--rose)}.nav{display:flex;align-items:center;gap:18px}.nav a{color:var(--muted);font-size:.9rem;text-decoration:none}.pill{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 16px;font-weight:700}.hero{padding:68px 0 44px;display:grid;grid-template-columns:1.25fr .75fr;gap:42px;align-items:center}.kicker{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);font-weight:800}.hero h1{font-size:clamp(2.7rem,7vw,5.2rem);line-height:.99;letter-spacing:-.075em;margin:18px 0}.hero h1 em{font-style:normal;color:var(--rose)}.lead{max-width:570px;color:var(--muted);font-size:1.1rem}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.btn{border:1px solid var(--ink);border-radius:999px;padding:12px 18px;font-weight:750;background:var(--ink);color:white}.btn.secondary{background:white;color:var(--ink);border-color:var(--line)}.hero-art{background:var(--pink);border-radius:30px;min-height:280px;display:grid;place-items:center;position:relative;overflow:hidden}.orbit{width:210px;height:210px;border:1px solid #bd8296;border-radius:50%;display:grid;place-items:center;transform:rotate(-12deg)}.face{width:140px;height:140px;border-radius:44% 56% 50% 50%;background:#fff9fa;display:grid;place-items:center;font-size:4rem;box-shadow:var(--shadow)}.spark{position:absolute;font-size:1.5rem}.s1{top:35px;left:35px}.s2{right:35px;top:60px}.s3{bottom:30px;right:55px}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin:18px 0 20px}.section-head h2{margin:5px 0 0;font-size:1.8rem;letter-spacing:-.05em}.section-head p{margin:0;color:var(--muted);font-size:.9rem}.profiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.profile{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow)}.avatar{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:1.7rem;background:var(--pink);margin-bottom:15px}.avatar.green{background:var(--green)}.avatar.lilac{background:#eae4f5}.profile h3{margin:0;font-size:1.1rem}.handle{font-size:.82rem;color:var(--muted)}.profile p{font-size:.92rem;color:var(--muted);min-height:44px}.online{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:#477052}.dot{width:7px;height:7px;background:#67a878;border-radius:50%}.profile .btn{width:100%;margin-top:14px}.notice{margin:25px 0 0;border:1px solid var(--line);border-radius:18px;padding:17px 19px;background:#fffdfb;color:var(--muted);font-size:.88rem}.how{padding:64px 0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:22px;border-top:2px solid var(--pink)}.step b{display:block;margin:9px 0 5px}.step p{margin:0;color:var(--muted);font-size:.92rem}.cta{background:#282624;color:#fff;border-radius:26px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:50px}.cta p{color:#d2cfcb;margin:5px 0 0}.cta .btn{background:#fff;color:#242321;border-color:#fff;white-space:nowrap}footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.modal-backdrop{position:fixed;inset:0;background:#17141288;display:none;align-items:center;justify-content:center;padding:18px;z-index:5}.modal-backdrop.open{display:flex}.modal{background:white;border-radius:24px;width:min(440px,100%);padding:25px;box-shadow:0 20px 80px #0002}.modal-top{display:flex;justify-content:space-between;align-items:center}.modal h2{margin:8px 0}.modal p{color:var(--muted);font-size:.93rem}.close{border:1px solid var(--line);background:white;border-radius:50%;width:36px;height:36px;font-size:1.1rem}.field{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:12px;margin:7px 0 12px;background:#fff}.modal .btn{width:100%}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#282624;color:#fff;padding:12px 18px;border-radius:999px;display:none;z-index:10;max-width:calc(100% - 24px);font-size:.9rem}.toast.show{display:block}
-@media(max-width:720px){.nav a{display:none}.hero{grid-template-columns:1fr;padding-top:48px;gap:25px}.hero-art{min-height:220px}.profiles{grid-template-columns:1fr}.profile{display:grid;grid-template-columns:58px 1fr;column-gap:14px}.profile .avatar{grid-row:span 3}.profile p{min-height:0;margin:8px 0}.profile .btn{grid-column:1/-1}.steps{grid-template-columns:1fr;gap:4px}.cta{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}header{height:68px}}
-</style>
-</head>
-<body>
-<div class="wrap">
-<header><a class="brand" href="#home">findatehila<span>butnotmine</span> 🙈</a><nav class="nav"><a href="#discover">Discover</a><a href="#how">How it works</a><button class="pill" id="joinTop">Join the community</button></nav></header>
-<main id="home">
-<section class="hero"><div><div class="kicker">A little more good in your day ♡</div><h1>Find a Tehila.<br>Find your <em>happy.</em></h1><p class="lead">Meet the Tehilas who make life brighter. Have a chat, share a laugh, and maybe find a new friend along the way.</p><div class="actions"><button class="btn" id="discoverBtn">Find your Tehila ↗</button><button class="btn secondary" id="joinBtn">I'm a Tehila</button></div></div><div class="hero-art" aria-label="Illustration of a smiling face"><span class="spark s1">✦</span><span class="spark s2">♡</span><span class="spark s3">✧</span><div class="orbit"><div class="face">☺</div></div></div></section>
-<section id="discover"><div class="section-head"><div><div class="kicker">Your next good conversation</div><h2>Meet some Tehilas</h2></div><p>Sample profiles · Just a preview</p></div>
-<div class="profiles">
-<article class="profile"><div class="avatar">🌷</div><div><h3>Sunny Tehila</h3><div class="handle">@sunnyvibes</div></div><p>Here for random chats, silly jokes, and making ordinary days feel special.</p><div class="online"><span class="dot"></span> Open to meeting friends</div><button class="btn chatBtn" data-name="Sunny Tehila">Say hello</button></article>
-<article class="profile"><div class="avatar green">🍀</div><div><h3>Kind Tehila</h3><div class="handle">@littlekindness</div></div><p>A good listener who believes a small conversation can change your day.</p><div class="online"><span class="dot"></span> Open to meeting friends</div><button class="btn chatBtn" data-name="Kind Tehila">Say hello</button></article>
-<article class="profile"><div class="avatar lilac">☁️</div><div><h3>Cloud-nine Tehila</h3><div class="handle">@softdays</div></div><p>Music recommendations, fun questions, and chats with a positive vibe.</p><div class="online"><span class="dot"></span> Open to meeting friends</div><button class="btn chatBtn" data-name="Cloud-nine Tehila">Say hello</button></article>
-</div><div class="notice"><strong>Little note:</strong> These are fictional demo profiles, not real users. This page is a front-end prototype: chats, accounts, payments, and profile listings are not connected to a live service yet.</div></section>
-<section class="how" id="how"><div class="kicker">Easy as 1, 2, hello</div><div class="section-head"><h2>How it works</h2><p>Good conversations start with kindness.</p></div><div class="steps"><div class="step"><span>01 · Discover</span><b>Find your kind of Tehila</b><p>Browse profiles and find people who share your vibe.</p></div><div class="step"><span>02 · Say hello</span><b>Start a friendly chat</b><p>Meet new people in a respectful space where everyone chooses to join.</p></div><div class="step"><span>03 · Keep it kind</span><b>Let friendship happen</b><p>Take your time, protect your privacy, and block or report anyone who makes you uncomfortable.</p></div></div></section>
-<section class="cta"><div><h2>Be somebody's bright spot. ♡</h2><p>Join the idea, meet kind people, and make someone's day.</p></div><button class="btn" id="joinBottom">Join the community</button></section>
-</main><footer><span>© <span id="year"></span> Findatehilabutnotmine</span><span>Be kind · Respect boundaries · Keep personal details private</span></footer>
-</div>
-<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-top"><div class="kicker" id="modalKicker">A friendly hello</div><button class="close" id="closeModal" aria-label="Close">×</button></div><h2 id="modalTitle">Say hello ♡</h2><p id="modalText">This is a demo. No message will be sent yet.</p><label for="message">Your message</label><textarea class="field" id="message" rows="3" placeholder="Hey! Your profile seems lovely…"></textarea><button class="btn" id="sendDemo">Preview message</button><p style="font-size:.78rem;margin-bottom:0">Please don't share your address, passwords, school details, or other private information with people you just met.</p></div></div>
-<div class="toast" id="toast" role="status"></div>
-<script>
-const backdrop=document.getElementById('modalBackdrop'),toast=document.getElementById('toast');let activeName='the community';let toastTimer;
-document.getElementById('year').textContent=new Date().getFullYear();
-function showToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),3200)}
-function openModal(name,join=false){activeName=name;document.getElementById('modalKicker').textContent=join?'Join the idea':'A friendly hello';document.getElementById('modalTitle').textContent=join?'Join the community ♡':'Say hello to '+name+' ♡';document.getElementById('modalText').textContent=join?'Account creation is not connected yet. This button is a preview of the future sign-up flow.':'This is a demo chat with '+name+'. Messages are not sent or saved.';document.getElementById('message').value='';document.getElementById('sendDemo').textContent=join?'Preview sign-up':'Preview message';backdrop.classList.add('open')}
-document.querySelectorAll('.chatBtn').forEach(b=>b.addEventListener('click',()=>openModal(b.dataset.name)));
-['joinTop','joinBtn','joinBottom'].forEach(id=>document.getElementById(id).addEventListener('click',()=>openModal('the community',true)));
-document.getElementById('discoverBtn').addEventListener('click',()=>document.getElementById('discover').scrollIntoView({behavior:'smooth'}));
-document.getElementById('closeModal').addEventListener('click',()=>backdrop.classList.remove('open'));
-backdrop.addEventListener('click',e=>{if(e.target===backdrop)backdrop.classList.remove('open')});
-document.getElementById('sendDemo').addEventListener('click',()=>{const msg=document.getElementById('message').value.trim();if(!msg){showToast('Write a little hello first ♡');return}backdrop.classList.remove('open');showToast('Demo only — your message was not sent. ♡')});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')backdrop.classList.remove('open')});
-</script>
-</body></html>
+<!doctype html>
+
+<html lang="en">  
+<head>  
+<meta charset="utf-8">  
+<meta name="viewport" content="width=device-width,initial-scale=1">  
+<meta name="theme-color" content="#fff0f6">  
+<title>Findatehilabutnotmine ♡</title>  
+<style>  
+:root{--pink:#ed6fa5;--hot:#d94c8b;--pale:#fff0f6;--paler:#fff8fb;--ink:#382632;--muted:#8b7582;--line:#f4dce7;--white:#fff}  
+*{box-sizing:border-box}  
+body{margin:0;background:linear-gradient(180deg,#fff4f8,#fff 38%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}  
+button,input,textarea{font:inherit}button{cursor:pointer}  
+.app{max-width:1040px;margin:auto;min-height:100vh;padding-bottom:92px}  
+header{position:sticky;top:0;z-index:5;background:#fffafcdd;backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}  
+.brand{display:flex;align-items:center;gap:10px}.logo{width:42px;height:42px;border-radius:15px;background:linear-gradient(135deg,#ffb8d6,#ed6fa5);display:grid;place-items:center;color:#fff;font-size:22px;box-shadow:0 7px 18px #ed6fa533}  
+.brand h1{font-size:17px;margin:0;letter-spacing:-.5px}.brand p{font-size:11px;color:var(--muted);margin:3px 0 0}  
+.pill{border:1px solid var(--line);background:white;border-radius:99px;padding:8px 12px;color:var(--hot);font-size:12px;font-weight:700}  
+main{padding:22px 20px;max-width:820px;margin:auto}  
+.hello{border-radius:27px;padding:24px;background:linear-gradient(130deg,#ffe0ed,#fff1f7 62%,#fff);border:1px solid #f9d5e4;position:relative;overflow:hidden}  
+.hello:after{content:"♡";position:absolute;right:20px;top:0;font-size:105px;color:#e969a018;transform:rotate(12deg)}  
+.eyebrow{text-transform:uppercase;letter-spacing:1.7px;font-size:10px;color:var(--hot);font-weight:800}  
+h2{font-size:26px;line-height:1.12;letter-spacing:-.8px;margin:9px 0}.hello p,.muted{color:var(--muted);font-size:13px;line-height:1.6}  
+.btn{border:0;border-radius:14px;padding:12px 16px;font-weight:750;background:var(--hot);color:white;box-shadow:0 6px 14px #d94c8b22}  
+.btn.secondary{background:white;color:var(--hot);border:1px solid var(--line);box-shadow:none}  
+.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:26px 0 12px}.sectionhead h3{margin:0;font-size:16px}.sectionhead span{font-size:12px;color:var(--muted)}  
+.stories{display:flex;gap:13px;overflow-x:auto;padding:3px 0 8px}  
+.story{flex:0 0 76px;text-align:center;border:0;background:transparent;color:var(--ink);font-size:11px}  
+.storyring{width:62px;height:62px;border-radius:22px;margin:0 auto 7px;background:white;border:2px dashed #ee9ec0;display:grid;place-items:center;color:var(--hot);font-size:24px}  
+.storyring.mine{background:var(--pale);border-style:solid}  
+.search{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:white;outline:none;color:var(--ink)}  
+.search:focus,input:focus,textarea:focus{border-color:#ed6fa5;box-shadow:0 0 0 3px #ed6fa51a}  
+.notice{border:1px solid var(--line);background:#fff9fc;border-radius:17px;padding:14px 15px;font-size:12px;line-height:1.55;color:#745b69}  
+.empty{padding:30px 20px;text-align:center;border:1px dashed #efc4d7;border-radius:22px;background:#fffafd}  
+.empty .heart{font-size:34px}.empty h3{margin:8px 0;font-size:17px}.empty p{font-size:13px;line-height:1.6;color:var(--muted);max-width:390px;margin:0 auto 15px}  
+.profile-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:13px}  
+.profile{background:white;border:1px solid var(--line);border-radius:21px;padding:17px;box-shadow:0 8px 25px #7e29400a}  
+.avatar{width:56px;height:56px;border-radius:20px;background:var(--pale);display:grid;place-items:center;color:var(--hot);font-size:24px;font-weight:800;margin-bottom:10px;overflow:hidden}  
+.avatar img{width:100%;height:100%;object-fit:cover}.profile h4{margin:0 0 4px;font-size:15px}.profile p{margin:0 0 13px;color:var(--muted);font-size:12px;line-height:1.45;overflow-wrap:anywhere}  
+.profile .btn{width:100%;padding:10px}  
+.field{display:block;font-size:12px;font-weight:750;margin:13px 0 6px}.control{width:100%;border:1px solid var(--line);background:white;border-radius:13px;padding:12px;color:var(--ink);outline:none}  
+textarea.control{resize:vertical;min-height:82px}  
+.formcard{background:white;border:1px solid var(--line);border-radius:22px;padding:18px}  
+.stack{display:grid;gap:10px}.row{display:flex;gap:10px;align-items:center}  
+.tabs{position:fixed;bottom:0;left:0;right:0;z-index:10;display:flex;justify-content:center;background:#fffdfef0;backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:9px 8px calc(9px + env(safe-area-inset-bottom))}  
+.tabwrap{width:min(650px,100%);display:grid;grid-template-columns:repeat(5,1fr);gap:3px}  
+.tab{border:0;background:transparent;color:#9a8290;border-radius:13px;padding:7px 2px 5px;font-size:10px;font-weight:700;display:grid;justify-items:center;gap:4px}.tab .ico{font-size:20px}.tab.active{color:var(--hot);background:var(--pale)}  
+.chatrow{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.chatrow:last-child{border:0}  
+.chatbubble{max-width:82%;padding:11px 13px;border-radius:16px;background:#fff0f6;font-size:13px;line-height:1.45;margin:8px 0}.chatbubble.mine{margin-left:auto;background:#f7d5e5}  
+.storycard{padding:17px;background:white;border:1px solid var(--line);border-radius:18px;margin-bottom:10px}  
+.small{font-size:11px;color:var(--muted)}.danger{color:#b33c65}.hidden{display:none!important}  
+footer{text-align:center;color:#a28b98;font-size:10px;padding:20px}  
+@media(min-width:700px){main{padding-top:28px}.hello{padding:32px}.hello h2{font-size:32px}}  
+</style>  
+</head>  
+<body>  
+<div class="app">  
+<header>  
+  <div class="brand"><div class="logo">♡</div><div><h1>findatehilabutnotmine</h1><p>find your kind of person 🎀</p></div></div>  
+  <button class="pill" id="headerProfile">＋ Join</button>  
+</header>  
+<main id="view"></main>  
+<footer>Made with ♡ · Prototype mode · Keep personal information private</footer>  
+</div>  
+<nav class="tabs" aria-label="Main navigation"><div class="tabwrap">  
+<button class="tab active" data-page="discover"><span class="ico">⌕</span>Discover</button>  
+<button class="tab" data-page="stories"><span class="ico">◉</span>Stories</button>  
+<button class="tab" data-page="chats"><span class="ico">♡</span>Chats</button>  
+<button class="tab" data-page="search"><span class="ico">⌕</span>Search</button>  
+<button class="tab" data-page="profile"><span class="ico">☻</span>Profile</button>  
+</div></nav>  
+<script>  
+const $ = s => document.querySelector(s);  
+const KEY = "findatehila-prototype-v1";  
+let state = {profiles:[], stories:[], chats:{}, blocked:[], reports:[], me:null};  
+try { const saved=JSON.parse(localStorage.getItem(KEY)||"null"); if(saved) state={...state,...saved}; } catch(e){}  
+let page="discover", activeChat=null, searchTerm="";  
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}};  
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));  
+const me=()=>state.profiles.find(p=>p.id===state.me);  
+const initials=n=>(n||"?").trim().split(/\s+/).slice(0,2).map(x=>x[0]||"").join("").toUpperCase();  
+function avatar(p){return `<div class="avatar">${p.photo?`<img src="${esc(p.photo)}" alt="">`:esc(initials(p.name))}</div>`}  
+function button(label,action,secondary=false){return `<button class="btn ${secondary?"secondary":""}" data-action="${action}">${label}</button>`}  
+function setPage(p){page=p;document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.page===p));render();}  
+function safeNote(){return `<div class="notice">♡ <b>Real people only.</b> This prototype does not invent profiles. Profiles you create here stay in this browser only; other people cannot see them yet. Do not enter your school, address, phone number or other private details.</div>`}  
+function render(){  
+ const v=$("#view");  
+ if(page==="discover"){  
+  const profiles=state.profiles.filter(p=>p.id!==state.me&&!state.blocked.includes(p.id)&&(!searchTerm||(`${p.name} ${p.bio} ${p.tag||""}`).toLowerCase().includes(searchTerm.toLowerCase())));  
+  v.innerHTML=`<section class="hello"><div class="eyebrow">your little corner of the internet</div><h2>Find a Tehila.<br>Find your people. ♡</h2><p>Meet real people, share little moments and make someone's day brighter.</p>${button(me()?"Edit my profile":"Create my profile","profile")}</section>  
+  <div class="sectionhead"><h3>Stories</h3><span>little life updates</span></div><div class="stories"><button class="story" data-action="add-story"><span class="storyring mine">＋</span>Your story</button>${state.stories.slice(-8).reverse().map(s=>`<button class="story" data-action="view-story" data-id="${s.id}"><span class="storyring">${esc(initials(s.name))}</span>${esc(s.name.split(" ")[0])}</button>`).join("")}</div>  
+  <div class="sectionhead"><h3>Meet your people</h3><span>${profiles.length} profiles</span></div><input class="search" id="discoverSearch" placeholder="Search names or interests…" value="${esc(searchTerm)}">  
+  <div style="height:13px"></div>${profiles.length?`<div class="profile-grid">${profiles.map(p=>`<article class="profile">${avatar(p)}<h4>${esc(p.name)}</h4><p>${esc(p.bio||"Here to meet kind people ♡")}</p>${button("Say hello","chat:"+p.id)}</article>`).join("")}</div>`:`<div class="empty"><div class="heart">♡</div><h3>No Tehilas here yet</h3><p>And that's on purpose. There are no fake or AI profiles. Create your own profile on this device, then invite real people to join when a shared account system is connected.</p>${button(me()?"Edit your profile":"Be the first to join","profile")}</div>`}  
+  <div style="height:15px"></div>${safeNote()}`;  
+  $("#discoverSearch").addEventListener("input",e=>{searchTerm=e.target.value;const pos=e.target.selectionStart;render();const inp=$("#discoverSearch");inp.focus();inp.setSelectionRange(pos,pos);});  
+ }else if(page==="profile"){  
+  const p=me();  
+  v.innerHTML=`<div class="sectionhead"><h3>${p?"Your profile":"Join the Tehila corner ♡"}</h3><span>real people only</span></div>  
+  ${safeNote()}<div style="height:13px"></div><form id="profileForm" class="formcard">  
+  <label class="field" for="name">Display name *</label><input class="control" id="name" maxlength="32" required placeholder="What should people call you?" value="${esc(p?.name||"")}">  
+  <label class="field" for="bio">A little about you</label><textarea class="control" id="bio" maxlength="160" placeholder="Your interests, favourite things… no private details">${esc(p?.bio||"")}</textarea>  
+  <label class="field" for="tag">Interests (optional)</label><input class="control" id="tag" maxlength="50" placeholder="Music, books, funny conversations…" value="${esc(p?.tag||"")}">  
+  <label class="field" for="photo">Profile picture (optional, this device only)</label><input class="control" id="photo" type="file" accept="image/*">  
+  <div class="small">This is a local preview profile, not a public account. Avoid photos that reveal your school uniform, location or other identifying details.</div>  
+  <div style="height:15px"></div><button class="btn" type="submit">${p?"Save changes":"Create local profile ♡"}</button> ${p?button("Delete local profile","delete-profile",true):""}  
+  </form><div style="height:14px"></div><div class="notice">For real profiles visible to everyone, sign-in and secure shared storage must be connected before launch.</div>`;  
+  $("#profileForm").addEventListener("submit",async e=>{  
+   e.preventDefault();let photo=p?.photo||"";  
+   const file=$("#photo").files[0];if(file){if(file.size>700000){alert("Please choose an image under 700 KB.");return;}photo=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file);});}  
+   const profile={id:p?.id||"u"+Date.now(),name:$("#name").value.trim(),bio:$("#bio").value.trim(),tag:$("#tag").value.trim(),photo};  
+   if(!profile.name)return;  
+   if(p)state.profiles=state.profiles.map(x=>x.id===p.id?profile:x);else{state.profiles.push(profile);state.me=profile.id;}  
+   save();alert("Saved on this device ♡ This profile is not public yet.");setPage("profile");  
+  });  
+ }else if(page==="search"){  
+  const matches=state.profiles.filter(p=>p.id!==state.me&&!state.blocked.includes(p.id)&&(!searchTerm||(`${p.name} ${p.bio} ${p.tag||""}`).toLowerCase().includes(searchTerm.toLowerCase())));  
+  v.innerHTML=`<div class="sectionhead"><h3>Find your people</h3><span>no fake profiles</span></div><input class="search" id="searchBox" placeholder="Search names and interests…" value="${esc(searchTerm)}"><div style="height:14px"></div>${matches.length?`<div class="profile-grid">${matches.map(p=>`<article class="profile">${avatar(p)}<h4>${esc(p.name)}</h4><p>${esc(p.bio)}</p><p>♡ ${esc(p.tag)}</p>${button("Say hello","chat:"+p.id)}</article>`).join("")}</div>`:`<div class="empty"><div class="heart">⌕</div><h3>No matching profiles</h3><p>Only profiles actually created in this browser can appear. A shared database is needed for everyone to discover one another.</p></div>`}${safeNote()}`;  
+  $("#searchBox").addEventListener("input",e=>{searchTerm=e.target.value;const pos=e.target.selectionStart;render();$("#searchBox").focus();$("#searchBox").setSelectionRange(pos,pos);});  
+ }else if(page==="stories"){  
+  const stories=[...state.stories].reverse();  
+  v.innerHTML=`<div class="sectionhead"><h3>Stories ♡</h3>${button("＋ Add story","add-story",true)}</div><p class="muted">Little updates from people. Prototype stories are stored only on this device.</p>${stories.length?stories.map(s=>`<article class="storycard"><b>${esc(s.name)}</b><div class="small">${new Date(s.time).toLocaleString()}</div><p>${esc(s.text)}</p>${button("Report story","report-story:"+s.id,true)}</article>`).join(""):`<div class="empty"><div class="heart">◉</div><h3>It's quiet here</h3><p>No stories yet. Add a little update to try the feature.</p>${button("Post a story","add-story")}</div>`}${safeNote()}`;  
+ }else if(page==="chats"){  
+  const ids=Object.keys(state.chats).filter(id=>state.profiles.some(p=>p.id===id)&&!state.blocked.includes(id));  
+  v.innerHTML=`<div class="sectionhead"><h3>Your chats ♡</h3><span>local demo only</span></div>${ids.length?ids.map(id=>{const p=state.profiles.find(x=>x.id===id),msgs=state.chats[id]||[],last=msgs[msgs.length-1];return `<button class="chatrow" style="width:100%;text-align:left;background:transparent;border:0" data-action="open-chat:${id}">${avatar(p)}<div style="flex:1"><b>${esc(p.name)}</b><div class="small">${esc(last?.text||"Say hello…")}</div></div><span>›</span></button>`}).join(""):`<div class="empty"><div class="heart">♡</div><h3>Your chats will live here</h3><p>When a profile exists in this browser, you can try the demo chat. Real private messaging needs a secure backend.</p>${button("Discover people","discover")}</div>`}${safeNote()}`;  
+ }else if(page==="chat"){  
+  const p=state.profiles.find(x=>x.id===activeChat);if(!p){setPage("chats");return;}  
+  const msgs=state.chats[p.id]||[];  
+  v.innerHTML=`<div class="sectionhead"><button class="btn secondary" data-action="chats">← Back</button><h3 style="flex:1">${esc(p.name)}</h3><button class="pill" data-action="safety:${p.id}">Safety</button></div>  
+  <div class="notice">Demo chat: messages stay in this browser and are not sent to the other person.</div>  
+  <div id="messages" style="padding:12px 0;min-height:180px">${msgs.map(m=>`<div class="chatbubble ${m.from==="me"?"mine":""}">${esc(m.text)}</div>`).join("")||`<p class="muted" style="text-align:center">Say a kind hello ♡</p>`}</div>  
+  <form id="chatForm" class="row"><input id="message" class="control" maxlength="500" placeholder="Write a message…" required><button class="btn" type="submit">Send</button></form>  
+  <p class="small">Don't share your address, school, passwords or private photos. You can block/report from Safety.</p>`;  
+  $("#chatForm").addEventListener("submit",e=>{e.preventDefault();const text=$("#message").value.trim();if(!text)return;state.chats[p.id]=[...(state.chats[p.id]||[]),{from:"me",text,time:Date.now()}];save();render();});  
+ }  
+}  
+function addStory(){  
+ if(!me()){alert("Create your profile first.");setPage("profile");return;}  
+ const text=prompt("Write a short story update (no private information):");if(!text||!text.trim())return;  
+ state.stories.push({id:"s"+Date.now(),user:state.me,name:me().name,text:text.trim().slice(0,240),time:Date.now()});save();setPage("stories");  
+}  
+function safety(id){  
+ const p=state.profiles.find(x=>x.id===id);if(!p)return;  
+ const choice=prompt(`Safety options for ${p.name}:\nType BLOCK to block this local profile\nType REPORT to record a local report\nCancel to go back`);if(!choice)return;  
+ if(choice.toUpperCase()==="BLOCK"){state.blocked=[...new Set([...state.blocked,id])];save();alert("Blocked on this device only.");setPage("discover");}  
+ else if(choice.toUpperCase()==="REPORT"){state.reports.push({id,time:Date.now()});save();alert("Report saved locally on this device. It is not sent to a moderation team yet.");}  
+}  
+document.addEventListener("click",e=>{  
+ const tab=e.target.closest("[data-page]");if(tab){setPage(tab.dataset.page);return;}  
+ const b=e.target.closest("[data-action]");if(!b)return;const a=b.dataset.action;  
+ if(a==="profile"){setPage("profile");return;}if(a==="discover"||a==="stories"||a==="chats"){setPage(a);return;}  
+ if(a==="add-story"){addStory();return;}  
+ if(a==="delete-profile"){if(confirm("Delete your profile and local demo data?")){state.profiles=state.profiles.filter(p=>p.id!==state.me);state.me=null;save();setPage("discover");}return;}  
+ if(a.startsWith("chat:")||a.startsWith("open-chat:")){activeChat=a.split(":")[1];setPage("chat");return;}  
+ if(a.startsWith("safety:")){safety(a.split(":")[1]);return;}  
+ if(a.startsWith("report-story:")){alert("In this prototype, story reports cannot reach a moderation team. A real service needs server-side reporting and moderation.");return;}  
+ if(a==="view-story"){const s=state.stories.find(x=>x.id===b.dataset.id);if(s)alert(s.name+"'s story:\n\n"+s.text);return;}  
+});  
+$("#headerProfile").addEventListener("click",()=>setPage("profile"));  
+render();  
+</script>  
+</body>  
+</html>  
